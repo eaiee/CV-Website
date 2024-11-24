@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your CV</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f0f4f8; /* Light grayish-blue */
+        }
+        header {
+            background: #003366; /* Deep navy blue */
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            border: 3px solid #fff;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        header h1 {
+            margin: 10px 0;
+            font-size: 2em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Section Styling */
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #d9eaf7; /* Soft sky blue */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #003366; /* Deep navy blue */
+            border-bottom: 2px solid #003366;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Collapsible and Content Styling */
+        .collapsible {
+            background: #00509e; /* Medium blue */
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border: none;
+            text-align: left;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .collapsible:hover {
+            background: #0066cc; /* Brighter blue */
+        }
+        .content {
+            padding: 15px;
+            display: none;
+            background: #e6f1fb; /* Very light blue */
+            border: 1px solid #aacfe6; /* Subtle border */
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        /* Columns for Education Section */
+        .columns {
+            display: flex;
+            gap: 20px; /* Space between columns */
+        }
+        .column {
+            flex: 1; /* Each column takes equal space */
+        }
+        .column:not(:last-child) {
+            border-right: 1px solid #aacfe6; /* Adds a visible line between columns */
+        }
+        .column {
+            padding: 10px; /* Padding inside each column */
+        }
+        ul {
+            list-style: disc; /* Adds bullet points */
+            margin: 0;
+            padding-left: 20px; /* Indent bullets */
+        }
+        ul li {
+            margin: 5px 0; /* Add spacing between list items */
+        }
+
+        /* Skills, Certifications, and Languages in Boxes */
+        .skills-list, .certifications-list, .languages-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills-list span, .certifications-list span, .languages-box span {
+            background: #00509e;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #003366;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const collapsibles = document.querySelectorAll(".collapsible");
+            collapsibles.forEach(button => {
+                button.addEventListener("click", () => {
+                    const content = button.nextElementSibling;
+                    content.style.display = content.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="285543616_396019005909791_5812232212649667157_n.jpg" alt="Your Picture">
+        <h1>Jemmy Marielle C. Ballesteros</h1>
+        <p>Mathematics Specialist | Educator | Research Enthusiast</p>
+    </header>
+
+    <section>
+        <button class="collapsible">Personal Information</button>
+        <div class="content">
+            <p><strong>Name:</strong> Jemmy Marielle C. Ballesteros</p>
+            <p><strong>Phone:</strong> +639562968138</p>
+            <p><strong>Email:</strong> jemmymarielleballesteros@gmail.com</p>
+	    <p><strong>Address:</strong> La Torre North, Bayombong, Nueva Vizacaya</p>
+        </div></section>
+
+ <section>
+        <button class="collapsible">Professional Summary</button>
+        <div class="content">
+            <p><em>"A dedicated mathematics educator with 5+ years of teaching experience specializing in innovative problem-solving techniques and curriculum development. Seeking to leverage expertise to foster analytical thinking in learners."</em>
+        </div> </section>
+
+    <section>
+        <button class="collapsible">Education Background</button>
+        <div class="content">
+            <div class="columns">
+                <div class="column">
+                    <h3>Tertiary Education</h3>
+                    <ul>
+                        <li><strong>Bachelor of Secondary Education, Major in Mathematics</strong>, Nueva Vizcaya State University (2022-2026)<em>- Graduate</em></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Secondary Education</h3>
+                    <h4>Senior High School</h4>
+                    <ul>
+                        <li><strong>Accountancy, Business, and Management</strong>, Nueva Vizcaya General Comprehensive High School (2020-2022) <em>- Graduate</em></li>
+                    </ul>
+                    <h4>Junior High School</h4>
+                    <ul>
+                        <li><strong>Science High School</strong>, Saint Mary's University (2016-2020) <em>- With Honors</em></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Primary Education</h3>
+                    <ul>
+                        <li><strong>La Torre Elementary School</strong> (2010-2016), <em>- Valedictorian</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible">Work Experience</button>
+        <div class="content">
+            <li>Private Mathematics Teacher (2026-present)</li>            	    
+	    <li>High School Mathematics Teacher (2027-present)</li>
+        </div></section>
+
+ <section>
+        <button class="collapsible">Skills</button>
+        <div class="content">
+            <div class="skills-list">
+                <span>Teaching</span>
+                <span>Research</span>
+                <span>Problem-Solving</span>
+                <span>Data Analysis</span>
+		<span>Coaching</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible">Achievements</button>
+        <div class="content">
+            <ul>
+                <li>Dean's List: Academic Year 2022-2023</li>
+                <li>Published research on <em>Tracer Study on the Employability of BSED Mathematics from 2018-2024</em></li>
+                <li>Peer Tutor or Teaching Assistant</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible">Certifications</button>
+        <div class="content">
+            <div class="certifications-list">
+                <span>Mathematical Literacy for Teaching</span>
+                <span>Licensure Examination for Teachers (LET)</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <button class="collapsible">Languages</button>
+        <div class="content">
+            <div class="languages-box">
+                <span>English</span>
+                <span>Tagalog</span>
+                <span>Ilocano</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jemmy Marielle C. Ballesteros. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
